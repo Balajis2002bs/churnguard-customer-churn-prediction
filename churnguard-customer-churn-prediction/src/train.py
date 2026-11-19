@@ -7,9 +7,11 @@ from sklearn.model_selection import train_test_split
 from datetime import datetime
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
+from pathlib import Path
 class Train_Model:
     def __init__(self,df: pd.DataFrame):
         self.df=df
+        Path('models').mkdir(exist_ok=True,parents=True)
         
     
     

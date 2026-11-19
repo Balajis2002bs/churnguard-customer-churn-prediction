@@ -1,7 +1,12 @@
 import pandas as pd
 from datetime import datetime
+from pathlib import Path
 
 class Data_Cleaning:
+    
+    Path('data\processed').mkdir(exist_ok=True,parents=True)
+        
+    
     def __init__(self,df):
         self.df=df
         
