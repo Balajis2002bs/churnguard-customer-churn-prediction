@@ -53,12 +53,12 @@ class Train_Model:
         self.evaluate_score(y_test,test_predictions)
 
 
-        # model_name=datetime.now().strftime('%y-%m-%d_%H-%M-%S')
-        # joblib.dump(model_pipeline,f'models\\churn_prediction_model.joblib')
-        # joblib.dump(le,'models\\le_churn_prediction_model.joblib')
-        # # print(lr.feature_names_in_)
+        model_name=datetime.now().strftime('%y-%m-%d_%H-%M-%S')
+        joblib.dump(model_pipeline,f'models\\churn_prediction_model.joblib')
+        joblib.dump(le,'models\\le_churn_prediction_model.joblib')
+        # print(lr.feature_names_in_)
         
-        # return f'churn_prediction_model.joblib'
+        return f'churn_prediction_model.joblib'
     
     
     
