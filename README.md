@@ -266,25 +266,25 @@ docker compose up --build
 
 ### Prediction Result
 
-![](churnguard-customer-churn-prediciton/screenshots/streamlit_app.png)
+![](churnguard-customer-churn-prediction/screenshots/streamlit_app.png)
 
 ---
 
 ### FastAPI Swagger UI
 
-![](churnguard-customer-churn-prediciton/screenshots/swagger_ui.png)
+![](churnguard-customer-churn-prediction/screenshots/swagger_ui.png)
 
 ---
 
 ### Docker Containers Running
 
-![](churnguard-customer-churn-prediciton/screenshots/docker_containers.png)
+![](churnguard-customer-churn-prediction/screenshots/docker_containers.png)
 
 ---
 
 
 ### Model Performance
-![](churnguard-customer-churn-prediciton/screenshots/model_performance.png)
+![](churnguard-customer-churn-prediction/screenshots/model_performance.png)
 
 ## 🔮 Future Improvements
 
