@@ -207,14 +207,11 @@ cd ChurnGuard
 
 ### Install Dependencies
 
-
 ```bash
 pip install -r requirements.txt
 ```
 
 ### Train Model
-
-#### Run the training pipeline to generate processed datasets and trained models:
 
 ```bash
 python src/main.py
@@ -269,25 +266,25 @@ docker compose up --build
 
 ### Prediction Result
 
-![](screenshots/streamlit_app.png)
+![](churnguard-customer-churn-prediciton/screenshots/streamlit_app.png)
 
 ---
 
 ### FastAPI Swagger UI
 
-![](screenshots/swagger_ui.png)
+![](churnguard-customer-churn-prediciton/screenshots/swagger_ui.png)
 
 ---
 
 ### Docker Containers Running
 
-![](screenshots/docker_containers.png)
+![](churnguard-customer-churn-prediciton/screenshots/docker_containers.png)
 
 ---
 
 
 ### Model Performance
-![](screenshots/model_performance.png)
+![](churnguard-customer-churn-prediciton/screenshots/model_performance.png)
 
 ## 🔮 Future Improvements
 
