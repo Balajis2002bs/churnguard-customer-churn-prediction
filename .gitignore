@@ -221,3 +221,73 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Environment Variables
+.env
+
+# Logs
+*.log
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Model Files (Optional)
+# Uncomment if models are too large
+# models/*.joblib
+
+# Processed Data
+data/processed/*.csv
+
+# Temporary Files
+*.tmp
+*.bak
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Docker
+docker-compose.override.yml
+
+# Cache
+.cache/
+
+# Python Bytecode
+*.pyc
+
+# Anaconda
+.anaconda_backup/
+.conda/
+
+# Mac/Linux
+*.swp
