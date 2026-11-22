@@ -80,7 +80,7 @@ class Data_Cleaning:
         df=df.drop(df[df['tenure'] <=0].index )
 
         #Dropping rows where Total Charges below 10 and greater than 200
-        df=df.drop(df[(df['TotalCharges'] <= 10 ) | (df['TotalCharges'] >= 200)].index )
+        df=df.drop(df[(df['TotalCharges'] <= 10 ) | (df['TotalCharges'] >= 2000)].index )
 
 
         #Filling mean value for Monthly Charges and Total Charges

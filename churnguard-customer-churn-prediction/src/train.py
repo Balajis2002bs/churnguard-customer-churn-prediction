@@ -8,6 +8,7 @@ from datetime import datetime
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from pathlib import Path
+
 class Train_Model:
     def __init__(self,df: pd.DataFrame):
         self.df=df
@@ -37,7 +38,7 @@ class Train_Model:
 
             ]
         )
-        X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=42)
+        X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=42,stratify=y)
 
         
 
@@ -59,7 +60,7 @@ class Train_Model:
         joblib.dump(model_pipeline,f'models\\churn_prediction_model.joblib')
         joblib.dump(le,'models\\le_churn_prediction_model.joblib')
         # print(lr.feature_names_in_)
-        
+        print(len(y_test))
         return f'churn_prediction_model.joblib'
     
     

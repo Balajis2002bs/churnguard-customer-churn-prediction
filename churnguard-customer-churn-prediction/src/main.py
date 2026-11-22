@@ -1,8 +1,6 @@
 import data_overview,data_cleaning,train,predict
 import pandas as pd
-from fastapi import FastAPI
 
-app=FastAPI()
 
 
 df=pd.read_csv('data/raw/Telco-Customer-Churn.csv')
