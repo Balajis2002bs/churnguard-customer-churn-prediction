@@ -51,9 +51,9 @@ if st.button("Predict Churn"):
 
     
     if prediction['prediction'] == 'Yes':
-        st.write(f'Probality of the Customer will be churn: {prediction["probality"]}')
+        st.write(f'Probality of the Customer will be churn: {prediction["probability"]}')
         st.error(f"Customer likely to churn.")
     else:
-        st.write(f'Probality of Customer will not be Churn: {prediction["probality"]}')
+        st.write(f'Probality of Customer will not be Churn: {prediction["probability"]}')
         st.success("Customer likely to stay.")
     

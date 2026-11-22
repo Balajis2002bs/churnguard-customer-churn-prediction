@@ -9,7 +9,7 @@ class Data_Cleaning:
     
     def __init__(self,df):
         self.df=df
-        Path('data\processed').mkdir(exist_ok=True,parents=True)
+        Path('data/processed').mkdir(exist_ok=True,parents=True)
         
     
     def data_clean(self):
@@ -101,7 +101,8 @@ class Data_Cleaning:
 
         print(f'In Cleaned Dataset, Total Missing Values: {df.isna().sum()}')
         file_name=datetime.now().strftime('%y-%m-%d_%H%M%S')
-        df.to_csv(f'data\\processed\\{file_name}_cleaned_data.csv',index=False)
+        
+        df.to_csv(Path("data/processed") / f"{file_name}_cleaned_data.csv",index=False)
         
         return f'{file_name}_cleaned_data.csv'
         
