@@ -21,8 +21,3 @@ services:
     depends_on:
       - fastapi
 
-  postgre:
-    image: postgres:16
-    volumes:
-      - workdir/volumes
-    
