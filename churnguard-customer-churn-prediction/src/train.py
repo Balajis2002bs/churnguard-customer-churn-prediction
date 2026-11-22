@@ -8,6 +8,7 @@ from datetime import datetime
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from pathlib import Path
+from sklearn.dummy import DummyClassifier
 
 class Train_Model:
     def __init__(self,df: pd.DataFrame):
@@ -41,6 +42,13 @@ class Train_Model:
         X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=42,stratify=y)
 
         
+        baseline=Pipeline(
+            steps=[
+                ('preprocessing',preprocessing),
+                ('baseline_model',DummyClassifier(strategy='most_frequent'))
+            ]
+        )
+        baseline_model=baseline.fit(X_train,y_train)
 
         
         model_pipeline=Pipeline(
@@ -57,6 +65,7 @@ class Train_Model:
 
 
         model_name=datetime.now().strftime('%y-%m-%d_%H-%M-%S')
+        joblib.dump(baseline_model,f'models\\baseline_model.joblib')
         joblib.dump(model_pipeline,f'models\\churn_prediction_model.joblib')
         joblib.dump(le,'models\\le_churn_prediction_model.joblib')
         # print(lr.feature_names_in_)

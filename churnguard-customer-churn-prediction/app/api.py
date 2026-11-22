@@ -7,6 +7,6 @@ app=FastAPI()
 
 @app.post('/predict',status_code=200)
 def predict(data: Customer_Data):
-    prediction,prob = predict_churn(data.model_dump())
+    prediction,prob,baseline = predict_churn(data.model_dump())
     
-    return {'prediction': prediction,'probability': prob}
+    return {'prediction': prediction,'probability': prob,'baseline':baseline}
